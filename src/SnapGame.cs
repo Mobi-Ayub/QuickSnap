@@ -34,15 +34,22 @@ namespace CardGames
                 if(SwinGame.KeyTyped(KeyCode.vk_LSHIFT)&&
                     SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
                 {
-                    //ADD SOUND EFFECTS HERE
+					//NOTHING HAPPENS
+					//ADD SOUND EFFECTS HERE (MARCUS LAI CODE FIX)
+					SwinGame.LoadSoundEffectNamed ("Slap1", "Slap_Sound.wav");
+					SwinGame.PlaySoundEffect ("Slap1");
                 }
                 else if (SwinGame.KeyTyped(KeyCode.vk_LSHIFT))
                 {
                     myGame.PlayerHit(0);
+					SwinGame.LoadSoundEffectNamed ("Slap2", "Sharp_Punch.wav");
+					SwinGame.PlaySoundEffect ("Slap2");
                 }
                 else if (SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
                 {
                     myGame.PlayerHit(1);
+					SwinGame.LoadSoundEffectNamed ("Slap3", "Strong_Punch.wav");
+					SwinGame.PlaySoundEffect ("Slap3");
                 }
             }
 		}
