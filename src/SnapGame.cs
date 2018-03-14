@@ -28,8 +28,8 @@ namespace CardGames
 
 			if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
 			{
-                //Flips to the next card
-				myGame.FlipNextCard ();
+				//Flips to the next card
+				myGame.Start ();
 			}
 
             //Mubashir Code (Team Leader)
@@ -70,11 +70,13 @@ namespace CardGames
 			Card top = myGame.TopCard;
 			if (top != null)
 			{
-				SwinGame.DrawText ("" + myGame.Score (0), Color.White, "GameFont", 0, 30);
+				
 				SwinGame.DrawText ("Top Card is " + top.ToString (), Color.RoyalBlue, 0, 20);
 				SwinGame.DrawText ("Player 1 score: " + myGame.Score(0), Color.RoyalBlue, 0, 30);
 				SwinGame.DrawText ("Player 2 score: " + myGame.Score(1), Color.RoyalBlue, 0, 40);
 				SwinGame.DrawCell (SwinGame.BitmapNamed ("Cards"), top.CardIndex, 521, 153);
+				SwinGame.DrawText ("" + myGame.Score (0), Color.White, "GameFont", 80, 50);
+				SwinGame.DrawText ("" + myGame.Score (1), Color.White, "GameFont", 770 , 50);
 			}
 			else
 			{
